@@ -61,8 +61,7 @@ This is the backend component of the Expense Tracker application. It provides en
 
     You can switch the database provider from SQLite to SQL Server or others by updating the DbContext configuration.
 
-    Deployment
-    This backend can be deployed to:
+    Deployment: This backend can be deployed to:
 
     Azure App Service
     Docker container
