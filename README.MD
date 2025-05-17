@@ -25,7 +25,6 @@ This is the backend component of the Expense Tracker application. It provides en
 ### Installation
 
 1. ⭐ Clone the repository:
-   ```bash
    git clone https://github.com/candreanivera/ExpenseTrackerBackend.git
     
     Navigate to the project directory:
