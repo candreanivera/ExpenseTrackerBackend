@@ -7,3 +7,4 @@ services:
     language: dotnet
     port: 8080
     registry: mcr.microsoft.com
+    host: containerapp
