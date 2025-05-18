@@ -157,3 +157,9 @@ C:\ExpenseTrackerASP.NET\ExpenseTracker.API\obj\Debug\net8.0\refint\ExpenseTrack
 C:\ExpenseTrackerASP.NET\ExpenseTracker.API\obj\Debug\net8.0\ExpenseTracker.API.pdb
 C:\ExpenseTrackerASP.NET\ExpenseTracker.API\obj\Debug\net8.0\ExpenseTracker.API.genruntimeconfig.cache
 C:\ExpenseTrackerASP.NET\ExpenseTracker.API\obj\Debug\net8.0\ref\ExpenseTracker.API.dll
+C:\ExpenseTrackerASP.NET\ExpenseTracker.API\bin\Debug\net8.0\out\web.config
+C:\ExpenseTrackerASP.NET\ExpenseTracker.API\bin\Debug\net8.0\out\appsettings.Development.json
+C:\ExpenseTrackerASP.NET\ExpenseTracker.API\bin\Debug\net8.0\out\appsettings.json
+C:\ExpenseTrackerASP.NET\ExpenseTracker.API\bin\Debug\net8.0\out\ExpenseTracker.API.deps.json
+C:\ExpenseTrackerASP.NET\ExpenseTracker.API\bin\Debug\net8.0\out\ExpenseTracker.API.runtimeconfig.json
+C:\ExpenseTrackerASP.NET\ExpenseTracker.API\obj\Debug\net8.0\ExpenseTracker.API.sourcelink.json
