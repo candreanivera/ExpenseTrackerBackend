@@ -1,0 +1,21 @@
+{
+  "name": "Expense Tracker Backend",
+  "image": "mcr.microsoft.com/dotnet/sdk:8.0",
+  "postCreateCommand": "docker build -t expense-tracker-backend . && docker run -d -p 8080:8080 expense-tracker-backend",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "forwardPorts": [8080],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ]
+}
