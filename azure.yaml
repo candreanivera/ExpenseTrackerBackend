@@ -1,0 +1,9 @@
+name: expense-tracker-backend
+
+services:
+  backend:
+    project: .
+    dockerfile: Dockerfile
+    language: dotnet
+    port: 8080
+    registry: mcr.microsoft.com
