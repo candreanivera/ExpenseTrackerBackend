@@ -1,4 +1,3 @@
-using ExpenseTracker.API.Models;
 using Microsoft.EntityFrameworkCore;
 using ExpenseTracker.API.Data;
 

@@ -1,3 +1,4 @@
+//DataAnnotations allows the use of validations, like [MaxLength(20)] or [Required]
 using System.ComponentModel.DataAnnotations;
 
 namespace ExpenseTracker.API.Models

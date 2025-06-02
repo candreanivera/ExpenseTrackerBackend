@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: expense-tracker-backend
+    runtime: dotnet
+    plan: free
+    buildCommand: dotnet build
+    startCommand: dotnet ExpenseTracker.API.dll
+    env: 
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Development
+    autoDeploy: true
