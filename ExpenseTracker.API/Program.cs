@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("https://candreanivera.github.io/ExpenseTrackerFrontEnd/") // React dev server
+            policy.WithOrigins("https://candreanivera.github.io") // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
