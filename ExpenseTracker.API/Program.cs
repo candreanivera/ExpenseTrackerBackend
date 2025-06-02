@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins() // React dev server
+            policy.AllowAnyOrigin() // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
