@@ -12,28 +12,45 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=expenses.db"));
 
-//To allow requests from the React App
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+//To allow requests from devEnvironment
+var DevCorsPolicy = "_DevCorsPolicy";
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
+    options.AddPolicy(name: DevCorsPolicy,
         policy =>
         {
-            policy.AllowAnyOrigin() // React dev server
+            policy.WithOrigins("https://localhost:3000") // React dev server
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
+//To allow requests from Prod environment
+var ProdCorsPolicy = "_ProdCorsPolicy";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: ProdCorsPolicy,
+        policy =>
+        {
+            policy.WithOrigins("https://expensetrackerbackend-1-r4ic.onrender.com/") // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
 });
 
 var app = builder.Build();
-//Enables the use of the CORS policy
-app.UseCors(MyAllowSpecificOrigins);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    //Enables the use of the CORS policy
+    app.UseCors(DevCorsPolicy);
+}
+else
+{
+    app.UseCors(ProdCorsPolicy);
 }
 
 app.UseHttpsRedirection();
