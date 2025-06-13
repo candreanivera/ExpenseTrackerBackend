@@ -14,6 +14,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 //To allow requests from devEnvironment
 var DevCorsPolicy = "_DevCorsPolicy";
+//To allow requests from Prod environment
+var ProdCorsPolicy = "_ProdCorsPolicy";
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: DevCorsPolicy,
@@ -23,20 +27,17 @@ builder.Services.AddCors(options =>
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
-});
 
-//To allow requests from Prod environment
-var ProdCorsPolicy = "_ProdCorsPolicy";
-builder.Services.AddCors(options =>
-{
     options.AddPolicy(name: ProdCorsPolicy,
         policy =>
         {
-            policy.WithOrigins("https://expensetrackerbackend-1-r4ic.onrender.com/") // React dev server
+            policy.WithOrigins("https://expensetrackerbackend-1-r4ic.onrender.com") // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
+
 });
+
 
 var app = builder.Build();
 
