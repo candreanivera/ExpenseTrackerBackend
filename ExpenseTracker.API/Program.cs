@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: ProdCorsPolicy,
         policy =>
         {
-            policy.WithOrigins("https://expensetrackerbackend-1-r4ic.onrender.com") // React dev server
+            policy.WithOrigins("https://expensetrackerbackend-1-r4ic.onrender.com/") // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
