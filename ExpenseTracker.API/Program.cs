@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: DevCorsPolicy,
         policy =>
         {
-            policy.WithOrigins("https://localhost:3000") // React dev server
+            policy.WithOrigins("http://localhost:3000") // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
