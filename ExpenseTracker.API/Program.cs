@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: ProdCorsPolicy,
         policy =>
         {
-            policy.WithOrigins("https://candreanivera.github.io/ExpenseTrackerFrontEnd") // React dev server
+            policy.WithOrigins("https://candreanivera.github.io") // React prod server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
