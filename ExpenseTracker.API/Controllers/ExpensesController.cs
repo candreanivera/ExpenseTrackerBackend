@@ -69,6 +69,8 @@ public class ExpensesController : ControllerBase
         // Update the properties
         existingExpense.Description = updatedExpense.Description;
         existingExpense.Amount = updatedExpense.Amount;
+        existingExpense.Date = updatedExpense.Date;
+        existingExpense.Category = updatedExpense.Category;
 
         await _context.SaveChangesAsync();
 
