@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: ProdCorsPolicy,
         policy =>
         {
-            policy.WithOrigins("https://expensetrackerbackend-1-r4ic.onrender.com/") // React dev server
+            policy.WithOrigins("https://candreanivera.github.io/ExpenseTrackerFrontEnd") // React dev server
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -40,6 +40,9 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+app.UseHttpsRedirection();
+app.UseRouting();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -54,8 +57,7 @@ else
     app.UseCors(ProdCorsPolicy);
 }
 
-app.UseHttpsRedirection();
-app.UseRouting();
+
 app.UseAuthorization();
 
 app.MapControllers();
